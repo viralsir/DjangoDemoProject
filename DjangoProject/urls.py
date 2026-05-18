@@ -19,10 +19,12 @@ from django.urls import path,include
 
 import student
 from firstapp.views import sayhello, aboutus, contactus, homepage
+from student.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("hello/",sayhello),
+    path("",index),
     path("aboutus/",aboutus),
     path("contactus/",contactus),
     path("home/",homepage),
